@@ -1,24 +1,11 @@
-
 pipeline {
     agent any
 
     stages {
         stage('Build') {
-echo 'Build Sucessfully'
-        }
-        stage('Publish HTML') {
             steps {
-                script {
-                    // Assuming your HTML file is generated in the 'reports' directory
-                    publishHTML([
-                        reportName: 'My HTML Report',
-                        reportDir: 'reports',
-                        reportFiles: 'index.html',
-                        keepAll: true,
-                        alwaysLinkToLastBuild: true,
-                        allowMissing: false
-                    ])
-                }
+                echo 'Build sucessfully'
+bat 'index.html'
             }
         }
     }
