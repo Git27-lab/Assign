@@ -5,12 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build sucessfully'
-            }
-        }
-stage('Run') {
-            steps {
-                echo 'Run Sucessfully'
-                bat 'index.html'
+bat 'index.html'
             }
         }
     }
