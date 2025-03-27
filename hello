@@ -10,7 +10,7 @@ pipeline {
 stage('Run') {
             steps {
                 echo 'Run Sucessfully'
-                bat 'node demo.js'
+                bat 'index.html'
             }
         }
     }
